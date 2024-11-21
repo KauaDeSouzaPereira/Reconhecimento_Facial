@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Rosto</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+    <script src="{{ url_for('static', filename='js/face-api.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/cadastro.js') }}"></script>
+</head>
+<body>
+    <div class="face-cadastro">
+        <div class="cadastro-video">
+            <video id="video" width="320" height="240" autoplay muted></video>
+            <canvas id="canvas" style="display: none;"></canvas> <!-- Canvas oculto -->
+        </div>
+        <button id="captureBtn" class="face-cadastro-btn">Cadastrar Rosto</button>
+        <!-- Adicionando o feedback visual -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Rosto</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+<body>
+    <div class="face-cadastro">
+        <div class="cadastro-video">
+            <img src="{{ url_for('video_feed') }}" width="700" height="520">
+            <form action="{{ url_for('capture_image') }}" method="post">
+                <input type="hidden" name="lg_id" value="{{ lg_id }}">
+        </div>
+        <button id="captureBtn" class="face-cadastro-btn">Cadastrar Rosto</button>
+    </form>
+        <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+        
+    </div>
+</body>
+</html>

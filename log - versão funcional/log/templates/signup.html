@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h1>Crie sua conta</h1>
+            <form action="{{ url_for('servidor_flask') }}" method="post">
+                <div class="input-box">
+                    <input type="text" name="nome" required>
+                    <label>Nome Completo</label>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="senha" required>
+                    <label>Senha</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="confirmar_senha" required>
+                    <label>Confirmar Senha</label>
+                </div>
+                <div class="input-box">
+                    <select name="restricao" required>
+                        <option value="">-- Selecione uma opção --</option>
+                        <option value="1">1 - Funcionário</option>
+                        <option value="2">2 - Gerente</option>
+                        <option value="3">3 - Diretor</option>
+                    </select>
+                </div>
+                <button type="submit" class="login-btn">Criar Conta</button>
+            </form>
+            <a href="index.html" class="register-link">Já tenho uma conta</a>
+        </div>
+    </div>
+</body>
+</html>
